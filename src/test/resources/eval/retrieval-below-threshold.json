@@ -1,0 +1,23 @@
+{
+  "id": "retrieval-below-threshold",
+  "description": "Chunk with similarity below configured threshold must not appear in keep-set.",
+  "query": "login failure after SSO",
+  "ragRetrieval": {
+    "topK": 5,
+    "similarityThreshold": 0.72
+  },
+  "candidates": [
+    {
+      "ticketId": "TKT-1004",
+      "similarity": 0.81,
+      "belowThreshold": false
+    },
+    {
+      "ticketId": "TKT-1005",
+      "similarity": 0.55,
+      "belowThreshold": true
+    }
+  ],
+  "expectedTicketIds": ["TKT-1004"],
+  "expectExcludedTicketIds": ["TKT-1005"]
+}

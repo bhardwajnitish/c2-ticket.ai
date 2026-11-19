@@ -1,0 +1,22 @@
+# Runs only when RUN_OLLAMA_CALIBRATION=true (see README / integration profile).
+# Same datasource and Ollama settings as dev for manual embedding/retrieval calibration.
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/c2_ticket_ai
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: create
+    open-in-view: false
+  flyway:
+    enabled: true
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3.2
+      embedding:
+        options:
+          model: nomic-embed-text

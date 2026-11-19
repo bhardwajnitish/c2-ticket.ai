@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:c2_ticket_ai;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+  flyway:
+    enabled: false
+  ai:
+    model:
+      chat: none
+      embedding: none
+
+rag:
+  embedding:
+    provider: test
+    model: nomic-embed-text
+    dimension: 768
+    base-url: http://localhost

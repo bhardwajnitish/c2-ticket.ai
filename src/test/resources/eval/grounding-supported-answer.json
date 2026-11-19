@@ -1,0 +1,16 @@
+{
+  "id": "grounding-supported-answer",
+  "description": "Generator output supported by context passes gate and returns ANSWER with citations from keep-set.",
+  "query": "How long do password reset links last?",
+  "contextChunks": [
+    {
+      "ticketId": "TKT-1001",
+      "content": "[Ticket TKT-1001] Password reset email missing\nDescription: Password reset links expire after 30 minutes."
+    }
+  ],
+  "generatorOutput": "According to TKT-1001, password reset links expire after 30 minutes.",
+  "expectOutcome": "ANSWER",
+  "expectNoMatchCode": null,
+  "expectCitationTicketIds": ["TKT-1001"],
+  "contractChecks": ["rag-envelope-keys"]
+}

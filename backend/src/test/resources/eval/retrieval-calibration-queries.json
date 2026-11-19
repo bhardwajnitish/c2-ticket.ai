@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "queries": [
+    {
+      "id": "password-reset-calibration",
+      "query": "password reset not working",
+      "mustIncludeTitles": ["Password reset email missing"],
+      "mustExcludeTitles": ["Billing invoice export failure"]
+    },
+    {
+      "id": "sso-login-calibration",
+      "query": "login failure after SSO",
+      "mustIncludeTitles": ["SSO login loop"],
+      "mustExcludeTitles": ["Quarterly billing reconciliation"]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: c2-ticket-ai
+  profiles:
+    active: dev
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+
+server:
+  port: 8080
+
+app:
+  cors:
+    allowed-origins:
+      - http://localhost:3000
+
+rag:
+  retrieval:
+    top-k: 5
+    similarity-threshold: 0.72
+  chunk:
+    max-characters: 2000
+    overlap-characters: 250
+    max-tokens: 512
+    overlap-tokens: 64
+    version: section-v1
+  embedding:
+    provider: ollama
+    model: nomic-embed-text
+    dimension: 768
+    base-url: http://localhost:11434

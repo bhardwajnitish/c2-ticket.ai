@@ -1,0 +1,29 @@
+{
+  "id": "retrieval-expected-tickets",
+  "description": "Query should retrieve keep-set containing expected ticket business keys.",
+  "query": "password reset not working",
+  "ragRetrieval": {
+    "topK": 5,
+    "similarityThreshold": 0.72
+  },
+  "expectedTicketIds": ["TKT-1001", "TKT-1003"],
+  "seedTickets": [
+    {
+      "ticketId": "TKT-1001",
+      "title": "Password reset email missing",
+      "description": "User does not receive reset email"
+    },
+    {
+      "ticketId": "TKT-1002",
+      "title": "Billing invoice PDF",
+      "description": "Download invoice for March"
+    },
+    {
+      "ticketId": "TKT-1003",
+      "title": "Reset link expired",
+      "description": "Password reset link already used"
+    }
+  ],
+  "expectKeepSetTicketIds": ["TKT-1001", "TKT-1003"],
+  "expectExcludedTicketIds": ["TKT-1002"]
+}

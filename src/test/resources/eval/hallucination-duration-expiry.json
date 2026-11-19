@@ -1,0 +1,20 @@
+{
+  "id": "hallucination-duration-expiry",
+  "description": "Controlled hallucination: context says 30 minutes; bad model says 24 hours; gate must FAIL; API NO_MATCH not ANSWER.",
+  "query": "How long do password reset links last?",
+  "contextChunks": [
+    {
+      "ticketId": "TKT-1001",
+      "content": "[Ticket TKT-1001] Password reset email missing\nDescription: Password reset links expire after 30 minutes."
+    }
+  ],
+  "authoritativeFactInContext": "password reset links expire after 30 minutes",
+  "generatorOutput": "Password reset links expire after 24 hours.",
+  "badAnswerReason": "duration claim contradicts context (24 hours vs 30 minutes)",
+  "expectOutcome": "NO_MATCH",
+  "expectNoMatchCode": "GROUNDING_GATE_FAILED",
+  "expectCitationTicketIds": [],
+  "expectAnswerNull": true,
+  "expectEscalationRecommended": true,
+  "mustNotReturnOutcome": "ANSWER"
+}

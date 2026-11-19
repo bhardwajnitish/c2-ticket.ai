@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "cases": [
+    {
+      "id": "retrieval-expected-tickets",
+      "file": "retrieval-expected-tickets.json"
+    },
+    {
+      "id": "retrieval-below-threshold",
+      "file": "retrieval-below-threshold.json"
+    },
+    {
+      "id": "grounding-supported-answer",
+      "file": "grounding-supported-answer.json"
+    },
+    {
+      "id": "hallucination-duration-expiry",
+      "file": "hallucination-duration-expiry.json"
+    }
+  ]
+}
